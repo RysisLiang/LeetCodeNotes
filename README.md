@@ -24,3 +24,4 @@
 830|较大分组的位置|数组|[笔记](./docs/array/830-较大分组的位置.md)|easy
 86|分隔链表|链表|[笔记](./docs/linked/86-分隔链表.md)|medium
 189|旋转数组|数组|[笔记](./docs/array/189-旋转数组.md)|medium
+228|汇总区间|数组|[笔记](./docs/array/228-汇总区间.md)|easy
