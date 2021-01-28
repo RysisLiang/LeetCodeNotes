@@ -21,8 +21,8 @@ public class ArrayUtil {
      */
     public static int[] handleToArray(String str) {
         return Arrays.stream(str.substring(1, str.length() - 1).split(","))
-                .filter(s -> !"".equals(s))
-                .mapToInt(Integer::parseInt)
+                .filter(StringUtil::isDefined)
+                .mapToInt(s -> Integer.parseInt(s.trim()))
                 .toArray();
     }
 
@@ -34,7 +34,7 @@ public class ArrayUtil {
      */
     public static int[][] handleToNestedArray(String str) {
         List<int[]> collect = Arrays.stream(str.substring(2, str.length() - 2).split("],\\["))
-                .filter(s -> !"".equals(s))
+                .filter(StringUtil::isDefined)
                 .map(s -> handleToArray("[" + s + "]"))
                 .collect(Collectors.toList());
         int[][] ints = new int[collect.size()][2];
