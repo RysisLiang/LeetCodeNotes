@@ -17,7 +17,7 @@ public class Main_674 {
 //        String str = "[]"; // 0
 //        String str = "[2,2,2,2,2]"; // 1
         String str = "[1,3,5,7]"; // 4
-        System.out.println(findLengthOfLCIS(ArrayUtil.handleToArray(str)));
+        System.out.println(findLengthOfLCIS(ArrayUtil.handleToIntArray(str)));
     }
 
     // 答案的贪心算法，使用下角标进行个数计算

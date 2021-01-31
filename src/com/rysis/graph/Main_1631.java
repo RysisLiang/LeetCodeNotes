@@ -20,7 +20,7 @@ public class Main_1631 {
 //        String heights = "[[1,2,3],[3,8,4],[5,3,5]]"; // 1
 //        String heights = "[[1,2,1,1,1],[1,2,1,2,1],[1,2,1,2,1],[1,2,1,2,1],[1,1,1,2,1]]"; // 0
         String heights = "[[1,10,6,7,9,10,4,9]]"; // 0
-        System.out.println(minimumEffortPath(ArrayUtil.handleToNestedArray(heights)));
+        System.out.println(minimumEffortPath(ArrayUtil.handleToNestedIntArray(heights)));
     }
 
     // 并查集

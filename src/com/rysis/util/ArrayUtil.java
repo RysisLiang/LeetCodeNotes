@@ -19,11 +19,23 @@ public class ArrayUtil {
      * @param str "[1,3,5,4,7]"
      * @return
      */
-    public static int[] handleToArray(String str) {
+    public static int[] handleToIntArray(String str) {
         return Arrays.stream(str.substring(1, str.length() - 1).split(","))
                 .filter(StringUtil::isDefined)
                 .mapToInt(s -> Integer.parseInt(s.trim()))
                 .toArray();
+    }
+
+    /**
+     * 转数组
+     *
+     * @param str "["tars","rats","arts","star"]"
+     * @return
+     */
+    public static String[] handleToStringArray(String str) {
+        return Arrays.stream(str.substring(1, str.length() - 1).split(","))
+                .filter(StringUtil::isDefined)
+                .toArray(String[]::new);
     }
 
     /**
@@ -32,10 +44,10 @@ public class ArrayUtil {
      * @param str "[[1,3],[5,4],[7,2]]"
      * @return
      */
-    public static int[][] handleToNestedArray(String str) {
+    public static int[][] handleToNestedIntArray(String str) {
         List<int[]> collect = Arrays.stream(str.substring(2, str.length() - 2).split("],\\["))
                 .filter(StringUtil::isDefined)
-                .map(s -> handleToArray("[" + s + "]"))
+                .map(s -> handleToIntArray("[" + s + "]"))
                 .collect(Collectors.toList());
         int[][] ints = new int[collect.size()][2];
         for (int i = 0; i < ints.length; i++) {

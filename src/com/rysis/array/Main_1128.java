@@ -18,7 +18,7 @@ public class Main_1128 {
     public static void main(String[] args) {
 //        String dominoes = "[[1,2],[2,1],[3,4],[5,6]]"; // 1
         String dominoes = "[[1,2],[1,2],[1,1],[1,2],[2,2]]"; // 3
-        System.out.println(numEquivDominoPairs(ArrayUtil.handleToNestedArray(dominoes)));
+        System.out.println(numEquivDominoPairs(ArrayUtil.handleToNestedIntArray(dominoes)));
 
     }
 

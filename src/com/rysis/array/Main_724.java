@@ -18,7 +18,7 @@ public class Main_724 {
 //        String s = "[1, 2, 3]"; // -1
 //        String s = "[2, 1, -1]"; // 0
         String s = "[0, 0, 0, 0, 1]"; // 4
-        System.out.println(pivotIndex(ArrayUtil.handleToArray(s)));
+        System.out.println(pivotIndex(ArrayUtil.handleToIntArray(s)));
     }
 
     // 用未知数表达一下
