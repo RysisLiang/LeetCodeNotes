@@ -20,7 +20,7 @@
 1046|最后一块石头的重量|堆|[笔记](./docs/array/1046-最后一块石头的重量.md)|easy todo
 435|无重叠区间|贪心算法|[笔记](./docs/greedy/435-无重叠区间.md)|medium todo
 509|斐波那契数|动态规划|[笔记](./docs/program/509-斐波那契数.md)|easy todo
-239|滑动窗口最大值|堆|[笔记](./docs/heap/239-滑动窗口最大值.md)|hard、review todo
+239|滑动窗口最大值|堆、滑动窗口|[笔记](./docs/heap/239-滑动窗口最大值.md)|hard、review todo
 830|较大分组的位置|数组|[笔记](./docs/array/830-较大分组的位置.md)|easy
 86|分隔链表|链表|[笔记](./docs/linked/86-分隔链表.md)|medium
 189|旋转数组|数组|[笔记](./docs/array/189-旋转数组.md)|medium
@@ -40,3 +40,4 @@
 7|整数反转|数字|[笔记](./docs/number/7-整数反转.md)|easy
 480|滑动窗口中位数|数组、滑动窗口|[笔记](./docs/array/480-滑动窗口中位数.md)|hard review
 643|子数组最大平均数 I|数组、滑动窗口|[笔记](./docs/array/643-子数组最大平均数1.md)|easy
+1208|尽可能使字符串相等|数组、滑动窗口|[笔记](./docs/array/1208-尽可能使字符串相等.md)|medium
