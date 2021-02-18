@@ -27,10 +27,35 @@ public class Main_1208 {
         String t = "nxargkbydxmsgby";
         int cost = 14; // 4
         System.out.println(equalSubstring(s, t, cost));
+        System.out.println(equalSubstring1(s, t, cost));
+    }
+
+    // 滑动窗口。优化下代码。双指针
+    public static int equalSubstring(String s, String t, int maxCost) {
+        char[] charsss = s.toCharArray();
+        char[] charstt = t.toCharArray();
+        int total = 0; // 窗口内的开销
+        int left = 0; // 窗口左边界
+        int right = 0; // 窗口右边界
+        int max = 0;
+        while (right < s.length()) {
+            if (total <= maxCost) { // 当前开销小于等于最大消耗值
+                max = Math.max(max, right - left);
+                total += Math.abs(charsss[right] - charstt[right]); // 添加右边界右移的开销
+                right++; // 右边界+1
+            } else { // 开销大于最大消耗值
+                total -= Math.abs(charsss[left] - charstt[left]); // 减去左边界的右移的开销
+                left++; // 左边界+1
+            }
+        }
+        if (total <= maxCost) { // 当前开销小于等于最大消耗值
+            max = Math.max(max, right - left);
+        }
+        return max;
     }
 
     // 滑动窗口
-    public static int equalSubstring(String s, String t, int maxCost) {
+    public static int equalSubstring1(String s, String t, int maxCost) {
         char[] charsss = s.toCharArray();
         char[] charstt = t.toCharArray();
         int total = 0; // 窗口内的开销
