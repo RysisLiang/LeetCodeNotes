@@ -22,7 +22,7 @@
 509|斐波那契数|动态规划|[笔记](./docs/program/509-斐波那契数.md)|easy todo
 239|滑动窗口最大值|堆、滑动窗口|[笔记](./docs/heap/239-滑动窗口最大值.md)|hard、review todo
 830|较大分组的位置|数组|[笔记](./docs/array/830-较大分组的位置.md)|easy
-86|分隔链表|链表|[笔记](./docs/linked/86-分隔链表.md)|medium
+86|分隔链表|链表|[笔记](./docs/linkedlist/86-分隔链表.md)|medium
 189|旋转数组|数组|[笔记](./docs/array/189-旋转数组.md)|medium
 228|汇总区间|数组|[笔记](./docs/array/228-汇总区间.md)|easy
 1202|交换字符串中的元素|字符串、并查集|[笔记](./docs/string/1202-交换字符串中的元素.md)|medium
@@ -46,3 +46,4 @@
 697|数组的度|数组|[笔记](./docs/array/697-数组的度.md)|easy
 1439|绝对差不超过限制的最长连续子数组|数组、滑动窗口|[笔记](./docs/array/1438-绝对差不超过限制的最长连续子数组.md)|medium
 766|托普利茨矩阵|数组|[笔记](./docs/array/766-托普利茨矩阵.md)|easy
+2|两数相加|链表|[笔记](./docs/linkedlist/2-两数相加.md)|medium

@@ -23,12 +23,10 @@ public class Main_86 {
 //        int x = 0;
 //        int[] vals = {1, 1};
 //        int x = 0;
-        ListNode head = null;
-        for (int i = vals.length - 1; i >= 0; i--) {
-            head = new ListNode(vals[i], head);
-        }
-        printNode("source = ", head);
-        printNode("result = ", partition(head, x));
+        ListNode head = ListNode.build(vals);
+
+        System.out.println(head.toString("source = "));
+        System.out.println(partition(head, x).toString("result = "));
     }
 
     private static void printNode(String prefix, ListNode head) {
@@ -103,19 +101,4 @@ public class Main_86 {
     }
 }
 
-class ListNode {
-    int val;
-    ListNode next;
 
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
