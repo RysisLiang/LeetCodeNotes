@@ -48,4 +48,5 @@
 766|托普利茨矩阵|数组|[笔记](./docs/array/766-托普利茨矩阵.md)|easy
 2|两数相加|链表|[笔记](./docs/linkedlist/2-两数相加.md)|medium
 1052|爱生气的书店老板|链表|[笔记](./docs/array/1052-爱生气的书店老板.md)|medium
-832|翻转图像|链表|[笔记](./docs/array/832-翻转图像.md)|easy
+832|翻转图像|数组|[笔记](./docs/array/832-翻转图像.md)|easy
+867|转置矩阵|数组|[笔记](./docs/array/867-转置矩阵.md)|easy
