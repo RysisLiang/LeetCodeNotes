@@ -2,6 +2,8 @@
 
 主要记录了做过的题目，有记录解题的代码，包含了注释。有记录思路和过程。方便以后直接复习。
 
+所有题目来源于[LeetCode中国官网(力扣) -> https://leetcode-cn.com/](https://leetcode-cn.com/)
+
 ## 目录
 
 按照时间顺序排序
@@ -51,3 +53,4 @@
 832|翻转图像|数组|[笔记](./docs/array/832-翻转图像.md)|easy
 867|转置矩阵|数组|[笔记](./docs/array/867-转置矩阵.md)|easy
 1178|猜字谜|位运算|[笔记](./docs/bit/1178-猜字谜.md)|hard review 
+395|至少有K个重复字符的最长子串|字符串|[笔记](./docs/string/395-至少有K个重复字符的最长子串.md)|medium review 分治思想
