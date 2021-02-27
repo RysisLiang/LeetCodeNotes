@@ -47,14 +47,14 @@ public class Main_130 {
                     } else {
                         innerList.add(new int[]{i, j});
                     }
-                }
-                // 不是第一行时，与上侧元素相同则进行合并
-                if (i > 0 && board[i][j] == board[i - 1][j]) {
-                    unionFind.merge(i * col + j, (i - 1) * col + j);
-                }
-                // 不是最后一列时，与右侧相同则进行合并
-                if (j > 0 && board[i][j] == board[i][j - 1]) {
-                    unionFind.merge(i * col + j, i * col + (j - 1));
+                    // 不是第一行时，与上侧元素相同则进行合并
+                    if (i > 0 && board[i][j] == board[i - 1][j]) {
+                        unionFind.merge(i * col + j, (i - 1) * col + j);
+                    }
+                    // 不是最后一列时，与右侧相同则进行合并
+                    if (j > 0 && board[i][j] == board[i][j - 1]) {
+                        unionFind.merge(i * col + j, i * col + (j - 1));
+                    }
                 }
             }
         }
