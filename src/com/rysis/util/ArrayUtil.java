@@ -65,7 +65,7 @@ public class ArrayUtil {
     public static int[][] handleToNestedIntArray(String str) {
         List<int[]> collect = Arrays.stream(str.substring(2, str.length() - 2).split("],\\["))
                 .filter(StringUtil::isDefined)
-                .map(s -> handleToIntArray("[" + s + "]"))
+                .map(s -> handleToIntArray("[" + s.trim() + "]"))
                 .collect(Collectors.toList());
         int[][] ints = new int[collect.size()][2];
         for (int i = 0; i < ints.length; i++) {
