@@ -1,4 +1,4 @@
-package com.rysis.array;
+package com.rysis.dp;
 
 import com.rysis.util.ArrayUtil;
 
