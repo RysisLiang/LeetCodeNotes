@@ -67,3 +67,5 @@
 120|三角形最小路径和|[笔记](./docs/dp/120-三角形最小路径和.md)|medium 也是很经典的DP题 review
 705|设计哈希集合|[笔记](./docs/hash/705-设计哈希集合.md)|easy
 706|设计哈希映射|[笔记](./docs/hash/706-设计哈希映射.md)|easy
+54|螺旋矩阵|[笔记](./docs/hash/54-螺旋矩阵.md)|medium todo
+59|螺旋矩阵2|[笔记](./docs/hash/59-螺旋矩阵2.md)|medium
