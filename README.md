@@ -64,8 +64,10 @@
 224|基本计算器|栈|[笔记](./docs/queue/224-基本计算器.md)|hard
 227|基本计算器2|栈|[笔记](./docs/queue/227-基本计算器2.md)|medium
 70|爬楼梯|动态规划|[笔记](./docs/dp/70-爬楼梯.md)|easy 最经典的DP题目
-120|三角形最小路径和|[笔记](./docs/dp/120-三角形最小路径和.md)|medium 也是很经典的DP题 review
-705|设计哈希集合|[笔记](./docs/hash/705-设计哈希集合.md)|easy
-706|设计哈希映射|[笔记](./docs/hash/706-设计哈希映射.md)|easy
-54|螺旋矩阵|[笔记](./docs/hash/54-螺旋矩阵.md)|medium todo
-59|螺旋矩阵2|[笔记](./docs/hash/59-螺旋矩阵2.md)|medium
+120|三角形最小路径和|动态规划|[笔记](./docs/dp/120-三角形最小路径和.md)|medium 也是很经典的DP题 review
+705|设计哈希集合|哈希|[笔记](./docs/hash/705-设计哈希集合.md)|easy
+706|设计哈希映射|哈希|[笔记](./docs/hash/706-设计哈希映射.md)|easy
+54|螺旋矩阵|哈希|[笔记](./docs/hash/54-螺旋矩阵.md)|medium todo
+59|螺旋矩阵2|哈希|[笔记](./docs/hash/59-螺旋矩阵2.md)|medium
+115|不同的子序列|动态规划|[笔记](./docs/dp/115-不同的子序列.md)|hard DP公式挺难推导出来的，是看题解才做出来的 review
+92|反转链表2|链表|[笔记](./docs/linkedlist/92-反转链表2.md)|medium
