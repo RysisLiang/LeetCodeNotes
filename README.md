@@ -76,4 +76,6 @@
 341|扁平化嵌套列表迭代器|栈队列|[笔记](./docs/queue/341-扁平化嵌套列表迭代器.md)|medium 迭代器的实现
 82|删除排序链表中的重复元素2|链表|[笔记](./docs/linkedlist/82-删除排序链表中的重复元素2.md)|medium
 83|删除排序链表中的重复元素|链表|[笔记](./docs/linkedlist/83-删除排序链表中的重复元素.md)|easy
-1143|最长公共子序列|动态规划|[笔记](./docs/dp/1143-最长公共子序列.md)|medium todo
+61|旋转链表|链表|[笔记](./docs/linkedlist/61-旋转链表.md)|medium todo
+1143|最长公共子序列|动态规划|[笔记](./docs/dp/1143-最长公共子序列.md)|medium
+263|丑数|数学|[笔记](./docs/number/263-丑数.md)|easy
