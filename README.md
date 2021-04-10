@@ -78,4 +78,5 @@
 83|删除排序链表中的重复元素|链表|[笔记](./docs/linkedlist/83-删除排序链表中的重复元素.md)|easy
 61|旋转链表|链表|[笔记](./docs/linkedlist/61-旋转链表.md)|medium todo
 1143|最长公共子序列|动态规划|[笔记](./docs/dp/1143-最长公共子序列.md)|medium
+80|删除有序数组中的重复项2|数组|[笔记](./docs/array/80-删除有序数组中的重复项2.md)|medium
 263|丑数|数学|[笔记](./docs/number/263-丑数.md)|easy
