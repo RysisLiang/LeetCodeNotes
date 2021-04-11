@@ -34,24 +34,24 @@ public class Main_480 {
         }
         double[] result = new double[nums.length - k + 1];
         // 小根堆
-        PriorityQueue<Integer> highQueue = new PriorityQueue<>();
+        PriorityQueue<Integer> lowQueue = new PriorityQueue<>();
         // 大根堆。去掉int溢出的干扰
-        PriorityQueue<Integer> lowQueue = new PriorityQueue<>((a, b) -> Integer.compare(b, a));
+        PriorityQueue<Integer> highQueue = new PriorityQueue<>((a, b) -> Integer.compare(b, a));
         for (int i = 0; i < nums.length; i++) {
             int item = nums[i];
 
             // 判断窗口的位移，来删减元素。以防止大小数堆出现不均衡的状态
             if (i >= k) {
                 // 删除最左侧元素
-                if (!highQueue.remove(nums[i - k])) {
-                    lowQueue.remove(nums[i - k]);
+                if (!lowQueue.remove(nums[i - k])) {
+                    highQueue.remove(nums[i - k]);
                 }
             }
 
-            int highSize = highQueue.size();
-            int lowSize = lowQueue.size();
-            Integer highMin = highQueue.peek();
-            Integer lowMax = lowQueue.peek();
+            int highSize = lowQueue.size();
+            int lowSize = highQueue.size();
+            Integer highMin = lowQueue.peek();
+            Integer lowMax = highQueue.peek();
             if (lowMax == null) {
                 lowMax = item;
             }
@@ -59,36 +59,36 @@ public class Main_480 {
             // 一一顿都转星移的添加操作
             if (highSize < lowSize) { // 大数堆小于小数堆
                 if (item >= lowMax) { // 当前元素大于等于小数堆max，则加入大数堆中
-                    highQueue.add(item);
+                    lowQueue.add(item);
                 } else { // 小数堆max加入到大数堆中
-                    highQueue.add(lowQueue.poll());
-                    lowQueue.add(item);
-                }
-            } else if (highSize > lowSize) { // 大数堆大于小数堆
-                if (item <= highMin) { // 当前元素小于等于大数堆min，则加入小数堆中
-                    lowQueue.add(item);
-                } else { // 大数堆min加入到小堆中
                     lowQueue.add(highQueue.poll());
                     highQueue.add(item);
                 }
+            } else if (highSize > lowSize) { // 大数堆大于小数堆
+                if (item <= highMin) { // 当前元素小于等于大数堆min，则加入小数堆中
+                    highQueue.add(item);
+                } else { // 大数堆min加入到小堆中
+                    highQueue.add(lowQueue.poll());
+                    lowQueue.add(item);
+                }
             } else {
                 if (item >= lowMax) {
-                    highQueue.add(item);
-                } else {
                     lowQueue.add(item);
+                } else {
+                    highQueue.add(item);
                 }
             }
 
             // 求中位数
             if (i >= k - 1) {
-                double mid = highQueue.size() >= lowQueue.size() ? highQueue.peek() : lowQueue.peek();
-                if (highQueue.size() == lowQueue.size()) { // 如果大小数堆一样，则表示k是偶数
-                    mid = (highQueue.peek().doubleValue() + lowQueue.peek().doubleValue()) / 2;
+                double mid = lowQueue.size() >= highQueue.size() ? lowQueue.peek() : highQueue.peek();
+                if (lowQueue.size() == highQueue.size()) { // 如果大小数堆一样，则表示k是偶数
+                    mid = (lowQueue.peek().doubleValue() + highQueue.peek().doubleValue()) / 2;
                 }
                 result[i - k + 1] = mid;
             }
 
-            System.out.println("highQueue=" + highQueue.toString() + ", lowQueue=" + lowQueue.toString() + ", mid=" + Arrays.toString(result));
+            System.out.println("lowQueue=" + lowQueue.toString() + ", highQueue=" + highQueue.toString() + ", mid=" + Arrays.toString(result));
         }
 
         return result;
