@@ -82,3 +82,4 @@
 263|丑数|数学|[笔记](./docs/number/263-丑数.md)|easy
 264|丑数2|数学|[笔记](./docs/number/264-丑数2.md)|medium
 783|二叉搜索树节点最小距离|二叉搜索树|[笔记](./docs/tree/783-二叉搜索树节点最小距离.md)|easy
+208|实现 Trie (前缀树)|前缀树|[笔记](./docs/tree/208-实现Trie(前缀树).md)|medium
