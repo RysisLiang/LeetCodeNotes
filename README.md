@@ -79,6 +79,7 @@
 61|旋转链表|链表|[笔记](./docs/linkedlist/61-旋转链表.md)|medium todo
 1143|最长公共子序列|动态规划|[笔记](./docs/dp/1143-最长公共子序列.md)|medium
 80|删除有序数组中的重复项2|数组|[笔记](./docs/array/80-删除有序数组中的重复项2.md)|medium
+81|搜索旋转排序数组2|数组|[笔记](./docs/array/81-搜索旋转排序数组2.md)|medium
 263|丑数|数学|[笔记](./docs/number/263-丑数.md)|easy
 264|丑数2|数学|[笔记](./docs/number/264-丑数2.md)|medium
 783|二叉搜索树节点最小距离|二叉搜索树|[笔记](./docs/tree/783-二叉搜索树节点最小距离.md)|easy
