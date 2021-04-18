@@ -22,7 +22,7 @@
 1046|最后一块石头的重量|堆|[笔记](./docs/array/1046-最后一块石头的重量.md)|easy todo
 435|无重叠区间|贪心算法|[笔记](./docs/greedy/435-无重叠区间.md)|medium todo
 509|斐波那契数|动态规划|[笔记](./docs/dp/509-斐波那契数.md)|easy todo
-239|滑动窗口最大值|堆、滑动窗口|[笔记](./docs/heap/239-滑动窗口最大值.md)|hard、review todo
+239|滑动窗口最大值|数组、滑动窗口|[笔记](./docs/array/239-滑动窗口最大值.md)|hard、review 十分经典的滑动窗口的题目
 830|较大分组的位置|数组|[笔记](./docs/array/830-较大分组的位置.md)|easy
 86|分隔链表|链表|[笔记](./docs/linkedlist/86-分隔链表.md)|medium
 189|旋转数组|数组|[笔记](./docs/array/189-旋转数组.md)|medium
