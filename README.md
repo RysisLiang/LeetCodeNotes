@@ -86,3 +86,4 @@
 208|实现 Trie (前缀树)|前缀树|[笔记](./docs/tree/208-实现Trie(前缀树).md)|medium
 220|存在重复元素3|数组|[笔记](./docs/array/220-存在重复元素3.md)|medium
 27|移除元素|数组|[笔记](./docs/array/27-移除元素.md)|easy
+28|实现strStr()|字符串|[笔记](./docs/string/28-实现strStr.md)|easy review 但是这道题涉及KMP算法，需要学习后补充上
