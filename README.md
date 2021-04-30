@@ -87,3 +87,5 @@
 220|存在重复元素3|数组|[笔记](./docs/array/220-存在重复元素3.md)|medium
 27|移除元素|数组|[笔记](./docs/array/27-移除元素.md)|easy
 28|实现strStr()|字符串|[笔记](./docs/string/28-实现strStr.md)|easy review 但是这道题涉及KMP算法，需要学习后补充上
+91|解码方法|动态规划|[笔记](./docs/dp/91-解码方法.md)|medium 又是一个dp的
+137|只出现一次的数字2|位运算|[笔记](./docs/bit/137-只出现一次的数字2.md)|medium 哈希表ok、位运算todo
