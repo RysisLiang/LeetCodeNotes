@@ -2,6 +2,7 @@ package com.rysis.bit;
 
 import com.rysis.util.ArrayUtil;
 
+import java.util.Arrays;
 import java.util.HashSet;
 
 /**
@@ -16,14 +17,37 @@ public class Main_137 {
 
     public static void main(String[] args) {
 //        String nums = "[2,2,3,2]"; // 3
-        String nums = "[0,1,0,1,0,1,99]"; // 99
-
+//        String nums = "[0,1,0,1,0,1,99]"; // 99
+        String nums = "[30000,500,100,30000,100,30000,100]"; // 500
 
         System.out.println(singleNumber(ArrayUtil.handleToIntArray(nums)));
     }
 
-    // 哈希表
+    // 位运算。这个思路真的是巧啊~~~
+    // a ^ 0 = a;  a ^ a = 0; => 0 ^ a ^ a = 0; 0 ^ a = a;
+    // x = 0; y = 0;
+    // x = x ^ a ^ y -> a
+    // y = y ^ a ^ x -> 0
+    // x = x ^ a ^ y -> 0
+    // y = y ^ a ^ x -> a
+    // x = x ^ a ^ y -> 0
+    // y = y ^ a ^ x -> 0
     public static int singleNumber(int[] nums) {
+        if (nums.length == 1) {
+            return nums[0];
+        }
+        Arrays.sort(nums);
+        long x = 0, y = 0;
+        for (int num : nums) {
+            x = x ^ (long) num ^ y;
+            y = y ^ (long) num ^ x;
+            System.out.printf("x=%d, y=%d %n", x, y);
+        }
+        return (int) x;
+    }
+
+    // 哈希表
+    public static int singleNumber1(int[] nums) {
         if (nums.length == 1) {
             return nums[0];
         }
