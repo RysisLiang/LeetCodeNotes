@@ -87,5 +87,6 @@
 220|存在重复元素3|数组|[笔记](./docs/array/220-存在重复元素3.md)|medium
 27|移除元素|数组|[笔记](./docs/array/27-移除元素.md)|easy
 28|实现strStr()|字符串|[笔记](./docs/string/28-实现strStr.md)|easy review 但是这道题涉及KMP算法，需要学习后补充上
-91|解码方法|动态规划|[笔记](./docs/dp/91-解码方法.md)|medium 又是一个dp的
-137|只出现一次的数字2|位运算|[笔记](./docs/bit/137-只出现一次的数字2.md)|medium 哈希表ok、位运算todo
+91|解码方法|动态规划|[笔记](./docs/dp/91-解码方法.md)|medium 又是一个dp的。还不错，注意字符转数字的方案优化
+137|只出现一次的数字2|位运算|[笔记](./docs/bit/137-只出现一次的数字2.md)|medium 哈希表ok、位运算需要review 题解上还提供了一种电路运算法
+690|员工的重要性|树|[笔记](./docs/tree/690-员工的重要性.md)|easy 并查集 深度遍历todo、广度遍历todo
