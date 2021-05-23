@@ -24,4 +24,34 @@ public class TreeNode {
         this.left = left;
         this.right = right;
     }
+
+    /**
+     * 构建二叉树
+     *
+     * @param list
+     * @return
+     */
+    static TreeNode build(Integer[] list) {
+        TreeNode[] arr = new TreeNode[list.length];
+        for (int i = 0; i < list.length; i++) {
+            if (list[i] == null) {
+                continue;
+            }
+            TreeNode node = new TreeNode(list[i]);
+            // 创建节点
+            arr[i] = node;
+            // 上级节点存在
+            TreeNode parent = arr[(i - 1) / 2];
+            if (parent != null) {
+                if ((i - 1) % 2 == 0) {
+                    parent.left = node;
+                } else {
+                    parent.right = node;
+                }
+            }
+
+        }
+        return arr[0];
+    }
+
 }
