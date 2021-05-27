@@ -20,8 +20,44 @@ public class Main_102 {
         System.out.println(levelOrder(root));
     }
 
-    // dfs层次遍历
+    // bfs层次遍历
     public static List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<>();
+        if (root == null) {
+            return result;
+        }
+
+        // 使用双向队列
+        LinkedList<TreeNode> linkedList = new LinkedList<>();
+        // 初始化队列数据
+        linkedList.offer(root);
+
+        // 检查队列
+        while (!linkedList.isEmpty()) {
+            int size = linkedList.size();
+            ArrayList<Integer> list = new ArrayList<>();
+            // 循环队列中该元素个数的次数，目的是为了把该层的元素全部弹出
+            for (int i = 0; i < size; i++) {
+                // 弹出队列头节点
+                TreeNode node = linkedList.pop();
+                // 保存元素（有顺序）
+                list.add(node.val);
+                // 检查子节点
+                if (node.left != null) {
+                    linkedList.offer(node.left);
+                }
+                if (node.right != null) {
+                    linkedList.offer(node.right);
+                }
+            }
+            result.add(list);
+        }
+
+        return result;
+    }
+
+    // dfs层次遍历
+    public static List<List<Integer>> levelOrder1(TreeNode root) {
         List<List<Integer>> rows = new ArrayList<>();
         return dfs(root, 0, rows);
     }
