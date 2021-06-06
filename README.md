@@ -1,8 +1,8 @@
-# LeetCode做题笔记
+# Leetcode做题笔记
 
 主要记录了做过的题目，有记录解题的代码，包含了注释。有记录思路和过程。方便以后直接复习。
 
-所有题目来源于[LeetCode中国官网(力扣) -> https://leetcode-cn.com/](https://leetcode-cn.com/)
+所有题目来源于[Leetcode中国官网(力扣) -> https://leetcode-cn.com/](https://leetcode-cn.com/)
 
 ## 目录
 
@@ -93,4 +93,4 @@
 104|二叉树的最大深度|树|[笔记](./docs/tree/104-二叉树的最大深度.md)|easy DFS的经典题目
 102|二叉树的层序遍历|树|[笔记](./docs/tree/102-二叉树的层序遍历.md)|medium BFS经典题目
 1744|你能在你最喜欢的那天吃到你最喜欢的糖果吗|数字|[笔记](./docs/number/1744-你能在你最喜欢的那天吃到你最喜欢的糖果吗.md)|medium 前缀和 review
-1744|你能在你最喜欢的那天吃到你最喜欢的糖果吗|数字|[笔记](./docs/number/1744-你能在你最喜欢的那天吃到你最喜欢的糖果吗.md)|medium 前缀和 review
+525|连续数组|数组|[笔记](./docs/array/525-连续数组.md)|medium 前缀和
