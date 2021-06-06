@@ -1,8 +1,6 @@
 package com.rysis.tree;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * Main_690
@@ -30,8 +28,52 @@ public class Main_690 {
         System.out.println(getImportance(employees, 1));
     }
 
-    // 由于是查看关联关系的结果，所以先试试并查集
+    // dfs-递归
+    // 记录指定员工的重要度
+    private static HashMap<Integer, Employee> map = new HashMap<>();
+
     public static int getImportance(List<Employee> employees, int id) {
+        // 为了方便查找员工先把员工，根据id进行映射
+        for (Employee employee : employees) {
+            map.put(employee.id, employee);
+        }
+        return dfs(id);
+    }
+
+    // 栈的dfs
+    private static int dfs(int id) {
+        // 使用栈来存储节点
+        LinkedList<Employee> linkedList = new LinkedList<>();
+
+        Employee employee = map.get(id);
+        linkedList.push(employee);
+        int res = 0;
+        // 检查栈
+        while (!linkedList.isEmpty()) {
+            // 弹出栈顶
+            Employee pop = linkedList.pop();
+            res += pop.importance;
+            // 检查栈顶是否存在下属，并压入栈中
+            for (Integer sub : pop.subordinates) {
+                linkedList.push(map.get(sub));
+            }
+        }
+        return res;
+    }
+
+    // 递归的dfs
+    private static int dfs1(int id) {
+        Employee employee = map.get(id);
+        // 重要度
+        int res = employee.importance;
+        for (Integer subordinate : employee.subordinates) {
+            res += dfs(subordinate);
+        }
+        return res;
+    }
+
+    // 由于是查看关联关系的结果，所以先试试并查集
+    public static int getImportance1(List<Employee> employees, int id) {
         // 初始化并查集大小。由于题目限制至多2000个员工
         Union union = new Union(2001);
         // 储存员工重要性数据数组
@@ -64,7 +106,7 @@ public class Main_690 {
     }
 
     // 并查集使用
-    static class Union {
+    private static class Union {
         public int[] topArr;
 
         public Union(int size) {
