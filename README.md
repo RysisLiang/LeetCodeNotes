@@ -89,9 +89,10 @@
 28|实现strStr()|字符串|[笔记](./docs/string/28-实现strStr.md)|easy review 但是这道题涉及KMP算法，需要学习后补充上
 91|解码方法|动态规划|[笔记](./docs/dp/91-解码方法.md)|medium 又是一个dp的。还不错，注意字符转数字的方案优化
 137|只出现一次的数字2|位运算|[笔记](./docs/bit/137-只出现一次的数字2.md)|medium 哈希表ok、位运算需要review 题解上还提供了一种电路运算法
-690|员工的重要性|树|[笔记](./docs/tree/690-员工的重要性.md)|easy 并查集、DFS、BFStodo
+690|员工的重要性|树|[笔记](./docs/tree/690-员工的重要性.md)|easy 并查集、DFS、BFSt
 104|二叉树的最大深度|树|[笔记](./docs/tree/104-二叉树的最大深度.md)|easy DFS的经典题目
 102|二叉树的层序遍历|树|[笔记](./docs/tree/102-二叉树的层序遍历.md)|medium BFS经典题目
 1744|你能在你最喜欢的那天吃到你最喜欢的糖果吗|数字|[笔记](./docs/number/1744-你能在你最喜欢的那天吃到你最喜欢的糖果吗.md)|medium 前缀和 review
 525|连续数组|数组|[笔记](./docs/array/525-连续数组.md)|medium 前缀和
 374|猜数字大小|二分法|[笔记](./docs/array/374-猜数字大小.md)|easy 二分法入门题
+456|132模式|栈队列|[笔记](./docs/queue/456-132模式.md)|medium 单调栈
