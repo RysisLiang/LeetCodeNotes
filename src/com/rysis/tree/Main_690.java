@@ -28,11 +28,39 @@ public class Main_690 {
         System.out.println(getImportance(employees, 1));
     }
 
+    // bfs-广度优先搜索
+    public static int getImportance(List<Employee> employees, int id) {
+        // 为了方便查找员工先把员工，根据id进行映射
+        for (Employee employee : employees) {
+            map.put(employee.id, employee);
+        }
+        return bfs(id);
+    }
+
+    private static int bfs(int id) {
+        // 创建一个双向队列
+        LinkedList<Employee> linkedList = new LinkedList<>();
+        // 向尾部添加初始元素
+        Employee employee = map.get(id);
+        linkedList.offer(employee);
+        int res = 0;
+        while (!linkedList.isEmpty()) {
+            Employee pop = linkedList.pop();
+            res += pop.importance;
+            // 将下属员工依次放入队列尾部
+            for (Integer sub : pop.subordinates) {
+                linkedList.offer(map.get(sub));
+            }
+        }
+
+        return res;
+    }
+
     // dfs-递归
     // 记录指定员工的重要度
     private static HashMap<Integer, Employee> map = new HashMap<>();
 
-    public static int getImportance(List<Employee> employees, int id) {
+    public static int getImportance2(List<Employee> employees, int id) {
         // 为了方便查找员工先把员工，根据id进行映射
         for (Employee employee : employees) {
             map.put(employee.id, employee);
