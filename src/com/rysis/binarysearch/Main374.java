@@ -1,4 +1,4 @@
-package com.rysis.array;
+package com.rysis.binarysearch;
 
 /**
  * Main_374
@@ -8,7 +8,7 @@ package com.rysis.array;
  * @version 1.00
  * @date 2021/6/14 14:12
  */
-public class Main_374 {
+public class Main374 {
 
     public static void main(String[] args) {
         int n = 10, pick = 6;
