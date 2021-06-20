@@ -96,3 +96,5 @@
 525|连续数组|数组|[笔记](./docs/array/525-连续数组.md)|medium 前缀和
 374|猜数字大小|二分法|[笔记](./docs/array/374-猜数字大小.md)|easy 二分法入门题
 456|132模式|栈队列|[笔记](./docs/queue/456-132模式.md)|medium 单调栈
+877|石子游戏|DP|[笔记](./docs/dp/877-石子游戏.md)|medium dp review
+1239|串联字符串的最大长度|数组|[笔记](./docs/array/1239-串联字符串的最大长度.md)|medium 迭代 回溯法todo
