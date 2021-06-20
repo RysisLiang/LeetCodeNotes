@@ -4,6 +4,10 @@
 
 所有题目来源于[Leetcode中国官网(力扣) -> https://leetcode-cn.com/](https://leetcode-cn.com/)
 
+## 笔记
+
+- [二分查找](./src/com/rysis/binarysearch/README.md)
+
 ## 目录
 
 按照时间顺序排序
@@ -99,3 +103,4 @@
 877|石子游戏|DP|[笔记](./docs/dp/877-石子游戏.md)|medium dp review
 1239|串联字符串的最大长度|数组|[笔记](./docs/array/1239-串联字符串的最大长度.md)|medium 迭代 回溯法todo
 1600|皇位继承顺序|树|[笔记](./docs/tree/1600-皇位继承顺序.md)|medium 多叉树dfs
+33|搜索旋转排序数组|二分查找|[笔记](./docs/binarysearch/33-搜索旋转排序数组.md)|medium
