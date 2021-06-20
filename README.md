@@ -106,3 +106,4 @@
 704|二分查找|二分查找|[笔记](./docs/binarysearch/704-二分查找.md)|easy
 69|x的平方根|二分查找|[笔记](./docs/binarysearch/69-x的平方根.md)|easy
 33|搜索旋转排序数组|二分查找|[笔记](./docs/binarysearch/33-搜索旋转排序数组.md)|medium
+278|第一个错误的版本|二分查找|[笔记](./docs/binarysearch/278-第一个错误的版本.md)|easy 需要注意边界
