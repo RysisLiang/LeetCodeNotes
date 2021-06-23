@@ -107,6 +107,6 @@
 69|x的平方根|二分查找|[笔记](./docs/binarysearch/69-x的平方根.md)|easy
 33|搜索旋转排序数组|二分查找|[笔记](./docs/binarysearch/33-搜索旋转排序数组.md)|medium
 278|第一个错误的版本|二分查找|[笔记](./docs/binarysearch/278-第一个错误的版本.md)|easy 需要注意边界
-401|二进制手表|位运算|[笔记](./docs/bit/401-二进制手表.md)|easy todo
+401|二进制手表|位运算|[笔记](./docs/bit/401-二进制手表.md)|easy 后续学会打表法后补上
 offer38|字符串的排列|位运算|[笔记](./docs/bit/offer38-字符串的排列.md)|medium review todo
 offer15|二进制中1的个数|位运算|[笔记](./docs/bit/offer15-二进制中1的个数.md)|easy 同191题一样
