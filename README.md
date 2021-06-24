@@ -110,3 +110,4 @@
 401|二进制手表|位运算|[笔记](./docs/bit/401-二进制手表.md)|easy 后续学会打表法后补上
 offer38|字符串的排列|位运算|[笔记](./docs/bit/offer38-字符串的排列.md)|medium review todo
 offer15|二进制中1的个数|位运算|[笔记](./docs/bit/offer15-二进制中1的个数.md)|easy 同191题一样
+149|直线上最多的点数|数学|[笔记](./docs/number/149-直线上最多的点数.md)|hard 求斜率、精度问题、最大公约数
