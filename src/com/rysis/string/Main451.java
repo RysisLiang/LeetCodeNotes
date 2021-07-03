@@ -15,8 +15,32 @@ public class Main451 {
         System.out.println(frequencySort(s));
     }
 
-    // 使用哈希表和priorityqueue排序
+    // 使用哈希表和默认的排序
     public static String frequencySort(String s) {
+        // 哈希表记录字符和出现的次数
+        HashMap<String, Integer> map = new HashMap<>();
+
+        for (int i = 0, len = s.length(); i < len; i++) {
+            char c = s.charAt(i);
+            // 出现次数+1
+            map.put(String.valueOf(c), map.getOrDefault(String.valueOf(c), 0) + 1);
+        }
+
+        StringBuilder sb = new StringBuilder(s.length());
+
+        List<String> list = new ArrayList<>(map.keySet());
+        list.sort((a, b) -> map.get(b) - map.get(a));
+        for (String ss : list) {
+            for (int i = map.get(ss); i > 0; i--) {
+                sb.append(ss);
+            }
+        }
+
+        return sb.toString();
+    }
+
+    // 使用哈希表和priorityqueue排序
+    public static String frequencySort1(String s) {
         // 哈希表记录字符和出现的次数
         HashMap<String, Integer> map = new HashMap<>();
 
