@@ -4,6 +4,8 @@
 
 所有题目来源于[Leetcode中国官网(力扣) -> https://leetcode-cn.com/](https://leetcode-cn.com/)
 
+ps: 20220306 之后的代码使用JDK11进行书写。所以有些集合的函数是11版本之后才有的（目前全面舍弃Java8，而是使用Java11进行开发）。
+
 ## 笔记
 
 - [二分查找](./src/com/rysis/binarysearch/README.md)
@@ -119,3 +121,4 @@ offer15|二进制中1的个数|位运算|[笔记](./docs/bit/offer15-二进制�
 153|寻找旋转排序数组中的最小值|二分|[笔记](./docs/array/153-寻找旋转排序数组中的最小值.md)|medium
 13|罗马数字转整数|字符串|[笔记](./docs/string/13-罗马数字转整数.md)|easy
 9|回文数|数字|[笔记](./docs/number/9-回文数.md)|easy
+504|七进制数|数字|[笔记](./docs/number/504-七进制数.md)|easy
