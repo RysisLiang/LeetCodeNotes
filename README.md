@@ -123,3 +123,4 @@ offer15|二进制中1的个数|位运算|[笔记](/docs/bit/offer15-二进制中
 9|回文数|数字|[笔记](/docs/number/9-回文数.md)|easy
 504|七进制数|数字|[笔记](/docs/number/504-七进制数.md)|easy
 34|在排序数组中查找元素的第一个和最后一个位置|二分查找|[笔记](/docs/binarysearch/34-在排序数组中查找元素的第一个和最后一个位置.md)|medium
+658|找到K个最接近的元素|二分查找|[笔记](/docs/binarysearch/658-找到K个最接近的元素.md)|medium
