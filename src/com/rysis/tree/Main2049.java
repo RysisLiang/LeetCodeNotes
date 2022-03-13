@@ -13,19 +13,94 @@ import java.util.List;
 public class Main2049 {
 
     public static void main(String[] args) {
-
         List.of(
-                new int[]{-1, 2, 0, 2, 0}
+                new int[]{-1, 2, 0, 2, 0},
+                new int[]{-1, 2, 0}
         ).forEach(parents -> System.out.println(countHighestScoreNodes(parents)));
     }
 
+    // 又是超时
+    static HashMap<Integer, List<Integer>> tree1 = new HashMap<>();
+    public static int countHighestScoreNodes(int[] parents) {
+        if (parents.length <= 3) {
+            return 2;
+        }
+
+        for (int i = 1; i < parents.length; i++) {
+            int parent = parents[i];
+            if (parent >= 0) {
+                // 有效的父级
+                if (tree1.containsKey(parent)) {
+                    tree1.get(parent).add(i);
+                } else {
+                    LinkedList<Integer> list = new LinkedList<>();
+                    list.add(i);
+                    tree1.put(parent, list);
+                }
+            }
+        }
+
+        System.out.println(tree1);
+        for (int i = 0; i < parents.length; i++) {
+            score = 1;
+            dfs(parents, 0, i);
+            if (score > max) {
+                max = score;
+                cnt = 1;
+            } else if (score == max) {
+                cnt += 1;
+            }
+
+            System.out.printf("%d score = %d %n", i, score);
+        }
+
+        return cnt;
+    }
+
+
+    static int score = 1;
+    static int max = 0;
+    static int cnt = 0;
+
+    // 这回换一种思路。dfs从叶子节点开始计算
+    // 这里由于是希望从叶子节点开始算。所以使用递归的方式去计数
+    private static int dfs(int[] parents, int node, int rm) {
+
+        int counter = 0;
+
+        // 子节点列表
+        List<Integer> childrenNode = tree1.getOrDefault(node, List.of());
+
+        for (Integer integer : childrenNode) {
+            int childrenCounter = dfs(parents, integer, rm);
+            if (node == rm) {
+                score = score * childrenCounter;
+            } else {
+                counter += childrenCounter;
+            }
+
+        }
+
+        // 将自己加进去
+        if (node != rm) {
+            counter += 1;
+
+            if (node == 0) {
+                score = score * counter;
+            }
+        }
+
+        return counter;
+    }
+
+
     // 保存树的结构
     // key: 父节点的值；value：子节点的列表
-    final static HashMap<Integer, List<Integer>> tree = new HashMap<>();
-
+    static HashMap<Integer, List<Integer>> tree = new HashMap<>();
     static int[] rootMapper;
 
-    public static int countHighestScoreNodes(int[] parents) {
+    // 这个方案超时了
+    public static int countHighestScoreNodes1(int[] parents) {
         if (parents.length <= 3) {
             return 2;
         }
@@ -51,18 +126,35 @@ public class Main2049 {
 
         System.out.println(tree);
 
+        LinkedList<Integer> stack = new LinkedList<>();
+
         // 然后要一次减去指定的节点，去计算分数
         for (int i = 0; i < parents.length; i++) {
             // 计算分数
+            int score = computeScore(parents, i);
+            if (stack.peek() != null) {
+                if (score < stack.peek()) {
+                    continue;
+                } else if (score > stack.peek()) {
+                    stack.clear();
+                }
+            }
+
+            stack.push(score);
+
+            System.out.printf("node = %d, score =%d %n", i, score);
         }
 
-        return 0;
+        return stack.size();
     }
 
     // 使用dfs去计算分数
-    private int computeScore(int[] parents, int node) {
+    private static int computeScore(int[] parents, int node) {
 
         final int[] root = new int[parents.length];
+        for (int i = 1; i < parents.length; i++) {
+            root[i] = -1;
+        }
 
         // 分数暂存器
         int score = 1;
@@ -77,10 +169,9 @@ public class Main2049 {
             final Integer _node = stack.pop();
             final int parent = parents[_node];
 
-
             // 记录树根
             if (parent >= 0) {
-                if (root[parent] > 0) {
+                if (root[parent] >= 0) {
                     root[_node] = root[parent];
                 } else {
                     root[_node] = parent;
@@ -92,6 +183,8 @@ public class Main2049 {
                 // 父级节点是被删除的节点
                 // 计数器重置
                 counter.put(_node, 1);
+                // 根节点重置
+                root[_node] = _node;
             } else if (_node != node) {
                 // 上级节点的计数器
                 final Integer parentCount = counter.getOrDefault(root[_node], 0);
@@ -107,6 +200,8 @@ public class Main2049 {
             }
         }
 
+
+        System.out.println("counter = " + counter);
 
         for (Integer value : counter.values()) {
             score = score * value;
