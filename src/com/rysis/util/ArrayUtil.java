@@ -35,6 +35,7 @@ public class ArrayUtil {
     public static String[] handleToStringArray(String str) {
         return Arrays.stream(str.substring(1, str.length() - 1).split(","))
                 .filter(StringUtil::isDefined)
+                .map(s -> s.trim().replace("\"", ""))
                 .toArray(String[]::new);
     }
 
