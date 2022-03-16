@@ -127,3 +127,4 @@ offer15|二进制中1的个数|位运算|[笔记](/docs/bit/offer15-二进制中
 589|N叉树的前序遍历|N叉树 DFS|[笔记](/docs/tree/589-N叉树的前序遍历.md)|medium
 2049|统计最高分的节点数目|二叉树|[笔记](/docs/tree/2049-统计最高分的节点数目.md)|medium todo
 599|两个列表的最小索引总和|数组|[笔记](/docs/array/599-两个列表的最小索引总和.md)|easy
+50|Pow(x, n)|二分查找|[笔记](/docs/binarysearch/50-Pow(x,n).md)|medium 迭代的方案还需要再好好理解下
