@@ -8,7 +8,7 @@ import java.util.HashMap;
  * Main149
  * 直线上最多的点数
  *
- * @author kunda-liang
+ * @author rysis
  * @version 1.00
  * @date 2021/6/24 22:42
  */

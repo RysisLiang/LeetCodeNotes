@@ -3,7 +3,7 @@ package com.rysis.tree;
 /**
  * TreeNode
  *
- * @author kunda-liang
+ * @author rysis
  * @version 1.00
  * @date 2021/4/13 23:04
  */

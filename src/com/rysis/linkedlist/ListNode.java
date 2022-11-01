@@ -4,7 +4,7 @@ package com.rysis.linkedlist;
  * ListNode
  * 链表题的公共链表结构
  *
- * @author kunda-liang
+ * @author rysis
  * @version 1.00
  * @date 2021/2/22 15:13
  */

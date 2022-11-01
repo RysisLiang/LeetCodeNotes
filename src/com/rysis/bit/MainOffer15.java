@@ -4,7 +4,7 @@ package com.rysis.bit;
  * MainOffer15
  * 二进制中1的个数
  *
- * @author kunda-liang
+ * @author rysis
  * @version 1.00
  * @date 2021/6/23 23:17
  */

@@ -4,7 +4,7 @@ package com.rysis.binarysearch;
  * Main33
  * x的平方根
  *
- * @author kunda-liang
+ * @author rysis
  * @version 1.00
  * @date 2021/6/20 16:55
  */

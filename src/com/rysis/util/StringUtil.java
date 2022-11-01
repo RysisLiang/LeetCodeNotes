@@ -3,7 +3,7 @@ package com.rysis.util;
 /**
  * StringUtil
  *
- * @author kunda-liang
+ * @author rysis
  * @version 1.00
  * @date 2021/1/28 19:39
  */

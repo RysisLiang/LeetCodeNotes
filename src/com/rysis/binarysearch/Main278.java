@@ -4,7 +4,7 @@ package com.rysis.binarysearch;
  * Main278
  * 第一个错误的版本
  *
- * @author kunda-liang
+ * @author rysis
  * @version 1.00
  * @date 2021/6/20 18:59
  */

@@ -4,7 +4,7 @@ package com.rysis.binarysearch;
  * Main_374
  * 猜数字大小
  *
- * @author kunda-liang
+ * @author rysis
  * @version 1.00
  * @date 2021/6/14 14:12
  */
