@@ -131,3 +131,4 @@ offer15|二进制中1的个数|位运算|[笔记](/docs/bit/offer15-二进制中
 50|Pow(x, n)|二分查找|[笔记](/docs/binarysearch/50-Pow(x,n).md)|medium 迭代的方案还需要再好好理解下
 367|有效的完全平方数|二分查找|[笔记](/docs/binarysearch/367-有效的完全平方数.md)|easy
 744|寻找比目标字母大的最小字母|二分查找|[笔记](/docs/binarysearch/744-寻找比目标字母大的最小字母.md)|easy
+349|两个数组的交集|数组|[笔记](/docs/array/349-两个数组的交集.md)|easy
