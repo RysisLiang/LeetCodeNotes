@@ -44,4 +44,4 @@ easy
 
 ## 实现
 
-[代码 -> com.rysis/bit/MainOffer15.java](../../src/com/rysis/bit/MainOffer15.java)
+[代码 -> com/rysis/offer/MainOffer15.java](../../src/com/rysis/offer/MainOffer15.java)

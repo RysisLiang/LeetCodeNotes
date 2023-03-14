@@ -60,4 +60,4 @@ Trie内定义一个数组，类型还是自己。大小就是26。初始全是nu
 
 ## 实现
 
-[代码 -> com.rysis/tree/Main208.java](../../src/com/rysis/tree/Main208.java)
+[代码 -> com/rysis/bank/Main208.java](../../src/com/rysis/bank/Main208.java)

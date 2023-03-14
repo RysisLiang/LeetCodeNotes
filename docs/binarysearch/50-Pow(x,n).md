@@ -47,4 +47,4 @@ medium
 
 ## 实现
 
-[代码 -> com.rysis/binarysearch/Main50.java](../../src/com/rysis/binarysearch/Main50.java)
+[代码 -> com/rysis/bank/Main50.java](../../src/com/rysis/bank/Main50.java)
