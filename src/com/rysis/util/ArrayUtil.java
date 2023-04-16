@@ -13,6 +13,9 @@ import java.util.stream.Collectors;
  */
 public class ArrayUtil {
 
+    private ArrayUtil() {
+    }
+
     /**
      * 转数组
      *
@@ -20,7 +23,8 @@ public class ArrayUtil {
      * @return
      */
     public static int[] handleToIntArray(String str) {
-        return Arrays.stream(str.substring(1, str.length() - 1).split(","))
+        final var ripeStr = str.replace("\\s", "");
+        return Arrays.stream(thinStr(ripeStr).split(","))
                 .filter(StringUtil::isDefined)
                 .mapToInt(s -> Integer.parseInt(s.trim()))
                 .toArray();
@@ -33,7 +37,8 @@ public class ArrayUtil {
      * @return
      */
     public static String[] handleToStringArray(String str) {
-        return Arrays.stream(str.substring(1, str.length() - 1).split(","))
+        final var ripeStr = str.replace("\\s", "");
+        return Arrays.stream(thinStr(ripeStr).split(","))
                 .filter(StringUtil::isDefined)
                 .map(s -> s.trim().replace("\"", ""))
                 .toArray(String[]::new);
@@ -46,10 +51,11 @@ public class ArrayUtil {
      * @return
      */
     public static char[] handleToCharArray(String str) {
-        List<Character> collect = Arrays.stream(str.substring(1, str.length() - 1).split(","))
+        final var ripeStr = str.replace("\\s", "");
+        List<Character> collect = Arrays.stream(thinStr(ripeStr).split(","))
                 .filter(StringUtil::isDefined)
                 .map(s -> s.charAt(1))
-                .collect(Collectors.toList());
+                .collect(Collectors.toUnmodifiableList());
         char[] result = new char[collect.size()];
         for (int i = 0; i < collect.size(); i++) {
             result[i] = collect.get(i);
@@ -64,10 +70,11 @@ public class ArrayUtil {
      * @return
      */
     public static int[][] handleToNestedIntArray(String str) {
-        List<int[]> collect = Arrays.stream(str.substring(2, str.length() - 2).split("],\\["))
+        final var ripeStr = str.replace("\\s", "");
+        List<int[]> collect = Arrays.stream(thinStr(ripeStr).split("],\\["))
                 .filter(StringUtil::isDefined)
-                .map(s -> handleToIntArray("[" + s.trim() + "]"))
-                .collect(Collectors.toList());
+                .map(s -> handleToIntArray(s.trim()))
+                .collect(Collectors.toUnmodifiableList());
         int[][] ints = new int[collect.size()][2];
         for (int i = 0; i < ints.length; i++) {
             ints[i] = collect.get(i);
@@ -82,14 +89,28 @@ public class ArrayUtil {
      * @return
      */
     public static char[][] handleToNestedCharArray(String str) {
-        List<char[]> collect = Arrays.stream(str.substring(2, str.length() - 2).split("],\\["))
+        final var ripeStr = str.replace("\\s", "");
+        List<char[]> collect = Arrays.stream(thinStr(ripeStr).split("],\\["))
                 .filter(StringUtil::isDefined)
-                .map(s -> handleToCharArray("[" + s + "]"))
-                .collect(Collectors.toList());
+                .map(ArrayUtil::handleToCharArray)
+                .collect(Collectors.toUnmodifiableList());
         char[][] ints = new char[collect.size()][2];
         for (int i = 0; i < ints.length; i++) {
             ints[i] = collect.get(i);
         }
         return ints;
     }
+
+    private static String thinStr(String str) {
+        String rs = str;
+        if (rs.startsWith("[")) {
+            rs = rs.substring(1);
+        }
+        if (rs.endsWith("]")) {
+            rs = rs.substring(0, rs.length() - 1);
+        }
+
+        return rs;
+    }
+
 }
