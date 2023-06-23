@@ -8,7 +8,7 @@ ps: 20220306 之后的代码使用JDK11进行书写。所以有些集合的函�
 
 ## 笔记
 
-- [二分查找](/docs/binarysearch/二分查找.md)
+- [二分查找](docs/binarysearch/0-二分查找.md)
 
 ## 目录
 
